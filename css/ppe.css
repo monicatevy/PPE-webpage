@@ -1259,7 +1259,7 @@
   * -------------------------------------------------------------------
   */
  #intro {
-     background: #151515 url(../resources/intro-bg.jpg) no-repeat center bottom;
+     background: #151515 url(../resources/mediatek86-2.png) no-repeat center bottom;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      background-size: cover;
@@ -1478,7 +1478,6 @@
      border-radius: 50%;
      margin: .9rem 0 0 0;
      float: left;
-     border: solid 0.025rem#000;
  }
  .intro-info .lead {
      text-align: left;
@@ -1532,6 +1531,11 @@
  }
  .button-section [class*="col-"] .button:first-child {
      margin-right: 4rem;
+ }
+
+ #video {
+     text-align: center;
+     padding-bottom: 15rem;
  }
  
  /**
