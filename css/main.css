@@ -2,13 +2,21 @@
 /**
  * ===================================================================
  * 01. webfonts and iconfonts - (_document-setup.scss)
- *
+
  * -------------------------------------------------------------------
  */
- @import url("fonts.css");
- @import url("font-awesome/css/font-awesome.min.css");
- @import url("micons/micons.css");
- 
+ @font-face {
+    font-family: 'poppins-bold';
+    src: url("fonts/Poppins/Poppins-Bold.ttf");
+ }
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url("fonts/Poppins/Poppins-SemiBold.ttf");
+ }
+ @font-face {
+    font-family: 'poppins-regular';
+    src: url("fonts/Poppins/Poppins-Regular.ttf");
+ }
  
  /**
   * ===================================================================
@@ -41,7 +49,7 @@
  }
  body {
      background: #151515;
-     font-family: "lora-regular", serif;
+     font-family: "poppins-regular", sans-serif;
      font-size: 1.7rem;
      line-height: 3rem;
      color: #6e6e6e;
@@ -71,7 +79,7 @@
   * -------------------------------------------------------------------
   */
  h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-     font-family: "poppins-semibold", sans-serif;
+     font-family: "poppins-semibold", serif;
      color: #313131;
      font-style: normal;
      text-rendering: optimizeLegibility;
@@ -81,7 +89,7 @@
      margin-bottom: 1.8rem;
  }
  h5, .h05, h6, .h06 {
-     font-family: "poppins-bold";
+     font-family: "poppins-bold", sans-serif;
      margin-bottom: 1.2rem;
  }
  h1, .h01 {
@@ -131,7 +139,7 @@
  
  }
  p.lead {
-     font-family: "lora-regular", serif;
+     font-family: "poppins-regular", sans-serif;
      font-size: 2rem;
      line-height: 1.8;
      color: #888888;
@@ -148,10 +156,10 @@
      font-weight: normal;
  }
  em, i {
-     font-family: "lora-italic", serif;
+     font-family: "poppins-regular", sans-serif;
  }
  strong, b {
-     font-family: "lora-bold", serif;
+     font-family: "poppins-regular", sans-serif;
  }
  small {
      font-size: 1.2rem;
@@ -194,7 +202,7 @@
      border: none;
  }
  abbr {
-     font-family: "poppins-bold", serif;
+     font-family: "poppins-bold", sans-serif;
      font-variant: small-caps;
      text-transform: lowercase;
      letter-spacing: .05rem;
@@ -301,7 +309,7 @@
      border-width: 0;
      width: 100%;
      max-width: 100%;
-     font-family: "lora-regular", sans-serif;
+     font-family: "poppins-regular", sans-serif;
  }
  th, td {
      padding: 1.5rem 3rem;
@@ -630,7 +638,7 @@
  input[type="reset"],
  input[type="button"] {
      display: inline-block;
-     font-family: "poppins-bold", sans-serif;
+     font-family: "poppins-regular", sans-serif;
      font-size: 1.4rem;
      text-transform: uppercase;
      letter-spacing: .3rem;
@@ -1079,26 +1087,6 @@
      left: 90px;
      top: 0;
  }
- header .logo {
-     float: left;
-     margin-left: 20px;
-     margin-right: 50px;
-     margin-top: 25px;
-     position: relative;
- }
- header .logo a {
-     display: block;
-     margin: 0;
-     padding: 0;
-     border: none;
-     font: 0/0 a;
-     text-shadow: none;
-     color: transparent;
-     width: 92px;
-     height: 15px;
-     background: url("../images/logo.png") no-repeat center;
-     background-size: 92px 15px;
- }
  
  /**
   * menu toggle - (_layout.css)
@@ -1197,7 +1185,7 @@
  #main-nav-wrap {
      display: block;
      width: 100%;
-     font-family: "poppins-medium", sans-serif;
+     font-family: "poppins-semibold", serif;
      font-size: 1.5rem;
      position: absolute;
      top: 100%;
@@ -1206,7 +1194,7 @@
  
  /* dropdown nav */
  .main-navigation {
-     background:#808080;
+     background: #1f1f1f;
      padding: 24px 30px 42px;
      margin: 0;
      width: 100%;
@@ -1271,7 +1259,7 @@
   * -------------------------------------------------------------------
   */
  #intro {
-     background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+     background: #151515 url(../resources/intro-bg.jpg) no-repeat center bottom;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      background-size: cover;
@@ -1303,7 +1291,7 @@
  }
  .intro-content h1 {
      color: #FFFFFF;
-     font-family: "poppins-medium", sans-serif;
+     font-family: "poppins-semibold", serif;
      font-size: 8.4rem;
      line-height: 1.071;
      max-width: 900px;
@@ -1324,7 +1312,7 @@
      text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
  }
  .intro-content .intro-position {
-     font-family: "lora-regular", serif;
+     font-family: "poppins-regular", serif;
      font-size: 1.7rem;
      line-height: 2.4rem;
      text-transform: uppercase;
@@ -1388,6 +1376,10 @@
      display: inline-block;
      margin: 0 20px;
      padding: 0;
+
+ }
+ .intro-social i {
+     font-size: 3.5rem;
  }
  .intro-social li a, .intro-social li a:visited {
      color: #FFFFFF;
@@ -1481,11 +1473,12 @@
      margin-left: -30px;
  }
  .intro-info img {
-     height: 9rem;
-     width: 9rem;
+     height: 10rem;
+     width: 10rem;
      border-radius: 50%;
      margin: .9rem 0 0 0;
      float: left;
+     border: solid 0.025rem#000;
  }
  .intro-info .lead {
      text-align: left;
@@ -2184,7 +2177,7 @@
      font-size: 3.6rem;
      margin-top: 1.2rem;
      margin-bottom: 0;
-     font-family: "poppins-medium", sans-serif;
+     font-family: "poppins-semibold", serif;
      color: white;
  }
  #stats .stat-title {
@@ -2468,7 +2461,8 @@
   * -------------------------------------------------------------------
   */
  footer {
-     padding-bottom: 3rem;
+     padding-top: 1.5rem; 
+     padding-bottom: 2.1rem;
      font-size: 1.4rem;
      font-family: "poppins-regular", sans-serif;
  }
@@ -2502,12 +2496,13 @@
  }
  footer .copyright span {
      display: inline-block;
+     color: #a1a1a1;
  }
  footer .copyright span::after {
      content: "|";
      display: inline-block;
      padding: 0 1rem 0 1.2rem;
-     color: rgba(255, 255, 255, 0.1);
+     color:#FFFFFF;
  }
  footer .copyright span:last-child::after {
      display: none;
@@ -2572,7 +2567,4 @@
  #go-top a:hover {
      background: #000000;
  }
- 
- /*# sourceMappingURL=main.css.map */
- 
  
